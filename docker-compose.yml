@@ -1,0 +1,12 @@
+#Author: Felix KLeine Bösing
+version: '2'
+
+services:
+
+  pythonagent:
+    build: .
+    image: gymnotebook
+    volumes:
+    - ./src:/home/work/src/
+    ports:
+      - "8888:8888"
