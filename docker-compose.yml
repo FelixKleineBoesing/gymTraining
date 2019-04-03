@@ -3,10 +3,10 @@ version: '2'
 
 services:
 
-  pythonagent:
+  gymnotebook:
     build: .
     image: gymnotebook
     volumes:
-    - ./src:/home/work/src/
+    - ./src:/home/jovyan/work
     ports:
       - "8888:8888"
