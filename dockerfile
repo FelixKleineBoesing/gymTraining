@@ -22,6 +22,7 @@ RUN \
         xvfb \
         wget \
         unzip \
+        gdebi \
         && \
 
     apt clean && \
@@ -47,4 +48,8 @@ COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
-CMD ['xvfb-run', '-s', '"-screen 0 1400x900x24"', 'jupyter', 'notebook']
+#COPY anydesk.deb anydesk.deb
+#RUN sudo apt update 
+#RUN yes | sudo apt install ./anydesk.deb
+#RUN sudo apt install -f
+#RUN echo kleine | anydesk --with-password

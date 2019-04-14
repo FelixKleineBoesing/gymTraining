@@ -6,6 +6,8 @@ services:
   gymnotebook:
     build: .
     image: gymnotebook
+    environment:
+      - DISPLAY:$DISPLAY
     volumes:
     - ./src:/home/jovyan/work
     ports:
