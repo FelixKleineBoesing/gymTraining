@@ -48,8 +48,3 @@ COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
-#COPY anydesk.deb anydesk.deb
-#RUN sudo apt update 
-#RUN yes | sudo apt install ./anydesk.deb
-#RUN sudo apt install -f
-#RUN echo kleine | anydesk --with-password
