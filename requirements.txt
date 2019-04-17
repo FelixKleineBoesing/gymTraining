@@ -5,3 +5,4 @@ gym[all]
 tensorflow
 keras
 pyvirtualdisplay
+tqdm
