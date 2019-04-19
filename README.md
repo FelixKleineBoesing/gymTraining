@@ -4,85 +4,38 @@ dockerized Version of openai´s gym in combination with an jupyter notebook to a
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions show you how to use this project to set up a openai gym environment. 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+If you haven´t already installed docker, just download the installer from docs.docker.com
+[Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
+[Docker for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce)
+[Docker for Mac OS](https://docs.docker.com/docker-for-mac/install/)
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Running the environment is fairly simple. Switch to the cloned repository and build the image
 
 ```
-Give the example
+git clone https://github.com/FelixKleineBoesing/gymTraining.git
+cd gymTraining
+docker-compose up --build
 ```
 
-And repeat
+Now you are running a gym environment with a jupyter notebook running on port 8888 on localhost.
 
-```
-until finished
-```
+###Content
 
-End with an example of getting some data out of the system or using it for a little demo
+For now there are only a few notebooks included which where created during my Reinforcement Learning Course. But more Content is likely to follow. 
 
-## Running the tests
+###Usage
 
-Explain how to run the automated tests for this system
+If you executed the docker-compose command which is mentioned above the environment will start after building and you´re able to access it via an ordinary jupyter notebook. 
+The src directory is mounted into the container, which means for you that everything you do in the work directory is persisted on your host system. If you want to add additional directory just add them in the docker-compose file. 
 
-### Break down into end to end tests
+You are able to install python packages from jupyter notebook, but it would be more consistent to add them to requirements.txt. Don´t forget to add the suffix "--build" to "docker-compose up" if you added something to dockerfile or requirements. Otherwise the already built image would be used (without the local changes).
 
-Explain what these tests test and why
+###Contributions
 
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+Feel free to fork and enhance the set of notebooks.
