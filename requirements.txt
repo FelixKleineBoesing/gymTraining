@@ -3,7 +3,6 @@ pandas
 matplotlib
 gym[all]
 tensorflow
-tensorflow-gpu
 keras
 pyvirtualdisplay
 tqdm
