@@ -25,17 +25,17 @@ docker-compose up --build
 
 Now you are running a gym environment with a jupyter notebook running on port 8888 on localhost.
 
-###Content
+### Content
 
 For now there are only a few notebooks included which where created during my Reinforcement Learning Course. But more Content is likely to follow. 
 
-###Usage
+### Usage
 
 If you executed the docker-compose command which is mentioned above the environment will start after building and you´re able to access it via an ordinary jupyter notebook. 
 The src directory is mounted into the container, which means for you that everything you do in the work directory is persisted on your host system. If you want to add additional directory just add them in the docker-compose file. 
 
 You are able to install python packages from jupyter notebook, but it would be more consistent to add them to requirements.txt. Don´t forget to add the suffix "--build" to "docker-compose up" if you added something to dockerfile or requirements. Otherwise the already built image would be used (without the local changes).
 
-###Contributions
+### Contributions
 
 Feel free to fork and enhance the set of notebooks.
