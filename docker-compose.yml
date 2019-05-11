@@ -8,5 +8,6 @@ services:
     image: gymnotebook
     volumes:
     - ./src:/home/jovyan/work
+    - ./data:/home/jovyan/work/data
     ports:
       - "127.0.0.1:8888:8888"
