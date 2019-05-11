@@ -6,3 +6,5 @@ tensorflow
 keras
 pyvirtualdisplay
 tqdm
+torch
+fastai
